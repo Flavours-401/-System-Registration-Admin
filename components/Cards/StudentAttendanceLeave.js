@@ -1,35 +1,30 @@
 import React from "react";
 import Chart from "chart.js";
 
-export default function CardBarChart() {
+export default function StudentChart() {
   React.useEffect(() => {
     let config = {
       type: "bar",
       data: {
         labels: [
-          "January",
-          "February",
-          "March",
-          "April",
-          "May",
-          "June",
-          "July",
+          "students",
+          
         ],
         datasets: [
           {
-            label: new Date().getFullYear(),
+            label: "Leave",
             backgroundColor: "#ed64a6",
             borderColor: "#ed64a6",
-            data: [30, 78, 56, 34, 100, 45, 13],
+            data: [13],
             fill: false,
             barThickness: 8,
           },
           {
-            label: new Date().getFullYear() - 1,
+            label:"Attendance",
             fill: false,
             backgroundColor: "#4c51bf",
             borderColor: "#4c51bf",
-            data: [27, 68, 86, 74, 10, 4, 87],
+            data: [87],
             barThickness: 8,
           },
         ],
@@ -95,28 +90,28 @@ export default function CardBarChart() {
         },
       },
     };
-    let ctx = document.getElementById("bar-chart").getContext("2d");
+    let ctx = document.getElementById("bar-chart-students").getContext("2d");
     window.myBar = new Chart(ctx, config);
   }, []);
   return (
     <>
-      <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded">
-        <div className="rounded-t mb-0 px-4 py-3 bg-transparent">
+      <div className="relative flex flex-col w-full min-w-0 mb-6 break-words bg-white rounded shadow-lg">
+        <div className="px-4 py-3 mb-0 bg-transparent rounded-t">
           <div className="flex flex-wrap items-center">
-            <div className="relative w-full max-w-full flex-grow flex-1">
-              <h6 className="uppercase text-blueGray-400 mb-1 text-xs font-semibold">
+            <div className="relative flex-1 flex-grow w-full max-w-full">
+              <h6 className="mb-1 text-xs font-semibold uppercase text-blueGray-400">
                 Performance
               </h6>
-              <h2 className="text-blueGray-700 text-xl font-semibold">
+              <h2 className="text-xl font-semibold text-blueGray-700">
                 Total orders
               </h2>
             </div>
           </div>
         </div>
-        <div className="p-4 flex-auto">
+        <div className="flex-auto p-4">
           {/* Chart */}
           <div className="relative h-350-px">
-            <canvas id="bar-chart"></canvas>
+            <canvas id="bar-chart-students"></canvas>
           </div>
         </div>
       </div>

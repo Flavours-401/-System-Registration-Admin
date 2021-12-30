@@ -14,32 +14,33 @@ export default function Index() {
           <div className="w-full px-4 md:w-8/12 lg:w-6/12 xl:w-6/12">
             <div className="pt-32 sm:pt-0">
               <h2 className="text-4xl font-semibold text-blueGray-600">
-                Student Registration System - A beautiful extension for Tailwind CSS.
+                Student Registration System - A powerful management system for staff and students.
               </h2>
               <p className="mt-4 text-lg leading-relaxed text-blueGray-500">
-                Notus NextJS is Free and Open Source. It does not change any of
-                the CSS from{" "}
-                <a
-                  href="https://tailwindcss.com/?ref=creativetim"
-                  className="text-blueGray-600"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Tailwind CSS
-                </a>
-                . It features multiple HTML elements and it comes with dynamic
-                components for ReactJS, Vue and Angular.
+                Student Registration System is a place for students and teachers to manage their daily tasks and courses.
               </p>
               <div className="mt-12">
-                <a
-                  href="https://www.creative-tim.com/learning-lab/tailwind/nextjs/overview/notus?ref=nnjs-index"
+                <Link
+                  href="/auth/login"
                   target="_blank"
                   className="px-6 py-4 mb-1 mr-1 text-sm font-bold text-white uppercase transition-all duration-150 ease-linear rounded shadow outline-none get-started focus:outline-none bg-blueGray-400 active:bg-blueGray-500 hover:shadow-lg"
                 >
-                  Get started
-                </a>
+                  <a>Login</a>
+                </Link>
              
               </div>
+              {/* <button
+                className="px-6 py-4 mt-12 mb-1 mr-1 text-sm font-bold text-white uppercase transition-all duration-150 ease-linear rounded shadow outline-none get-started focus:outline-none bg-blueGray-400 active:bg-blueGray-500 hover:shadow-lg"
+
+              >
+               <h1 className="title">
+                  Read{' '}
+                  <Link href="/posts/first-post">
+                    <a>this page!</a>
+                  </Link>
+                </h1>
+                Login
+              </button> */}
             </div>
           </div>
         </div>
@@ -92,10 +93,10 @@ export default function Index() {
                     ></polygon>
                   </svg>
                   <h4 className="text-xl font-bold text-white">
-                   SMS - Intro1
+                    SMS - Intro1
                   </h4>
                   <p className="mt-2 font-light text-white text-md">
-                  SMS - Intro1 -------------------
+                    SMS - Intro1 -------------------
                   </p>
                 </blockquote>
               </div>
@@ -113,7 +114,7 @@ export default function Index() {
                         SMS-CSS Components
                       </h6>
                       <p className="mb-4 text-blueGray-500">
-                      SMS-CSS Components
+                        SMS-CSS Components
                       </p>
                     </div>
                   </div>
@@ -126,7 +127,7 @@ export default function Index() {
                         SMS-JavaScript Components
                       </h6>
                       <p className="mb-4 text-blueGray-500">
-                      SMS-JavaScript Components
+                        SMS-JavaScript Components
                       </p>
                     </div>
                   </div>
@@ -139,7 +140,7 @@ export default function Index() {
                       </div>
                       <h6 className="mb-1 text-xl font-semibold">SMS-Pages</h6>
                       <p className="mb-4 text-blueGray-500">
-                      SMS-Pages
+                        SMS-Pages
                       </p>
                     </div>
                   </div>
@@ -152,7 +153,7 @@ export default function Index() {
                         SMS-Documentation
                       </h6>
                       <p className="mb-4 text-blueGray-500">
-                      SMS-Documentation
+                        SMS-Documentation
                       </p>
                     </div>
                   </div>
@@ -172,7 +173,7 @@ export default function Index() {
                 SMS-CSS Components
               </h3>
               <p className="mt-4 mb-4 text-lg font-light leading-relaxed text-blueGray-600">
-              SMS-CSS Components
+                SMS-CSS Components
               </p>
               <div className="block pb-6">
                 <span className="inline-block px-2 py-1 mt-2 mr-2 text-xs font-semibold uppercase bg-white rounded-full text-blueGray-500 last:mr-0">
@@ -400,13 +401,13 @@ export default function Index() {
           </div>
         </div>
 
-        
+
       </section>
 
-      
-   
 
-      
+
+
+
       <Footer />
     </>
   );

@@ -3,7 +3,8 @@ import React from "react";
 // components
 
 import CardLineChart from "components/Cards/CardLineChart.js";
-import CardBarChart from "components/Cards/CardBarChart.js";
+import StaffChart from "components/Cards/StaffAttendanceLeave.js";
+import StudentChart from "components/Cards/StudentAttendanceLeave.js";
 import CardPageVisits from "components/Cards/CardPageVisits.js";
 import CardSocialTraffic from "components/Cards/CardSocialTraffic.js";
 
@@ -19,7 +20,8 @@ export default function Dashboard() {
           <CardLineChart />
         </div>
         <div className="w-full px-4 xl:w-4/12">
-          <CardBarChart />
+          <StaffChart />
+          <StudentChart/>
         </div>
       </div>
       <div className="flex flex-wrap mt-4">

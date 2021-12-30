@@ -1,34 +1,31 @@
 import React from "react";
 import Chart from "chart.js";
 
-export default function CardLineChart() {
+export default function StaffChart() {
   React.useEffect(() => {
-    var config = {
-      type: "line",
+    let config = {
+      type: "bar",
       data: {
         labels: [
-          "January",
-          "February",
-          "March",
-          "April",
-          "May",
-          "June",
-          "July",
+          "Staff",
+          
         ],
         datasets: [
           {
-            label: "Students",
-            backgroundColor: "#4c51bf",
-            borderColor: "#4c51bf",
-            data: [65, 78, 66, 44, 56, 67, 75],
+            label: "Leave",
+            backgroundColor: "#ed64a6",
+            borderColor: "#ed64a6",
+            data: [13],
             fill: false,
+            barThickness: 8,
           },
           {
-            label: "Staff",
+            label:"Attendance",
             fill: false,
-            backgroundColor: "#fff",
-            borderColor: "#fff",
-            data: [40, 68, 86, 74, 56, 60, 87],
+            backgroundColor: "#4c51bf",
+            borderColor: "#4c51bf",
+            data: [87],
+            barThickness: 8,
           },
         ],
       },
@@ -37,15 +34,7 @@ export default function CardLineChart() {
         responsive: true,
         title: {
           display: false,
-          text: "Sales Charts",
-          fontColor: "white",
-        },
-        legend: {
-          labels: {
-            fontColor: "white",
-          },
-          align: "end",
-          position: "bottom",
+          text: "Orders Chart",
         },
         tooltips: {
           mode: "index",
@@ -55,24 +44,26 @@ export default function CardLineChart() {
           mode: "nearest",
           intersect: true,
         },
+        legend: {
+          labels: {
+            fontColor: "rgba(0,0,0,.4)",
+          },
+          align: "end",
+          position: "bottom",
+        },
         scales: {
           xAxes: [
             {
-              ticks: {
-                fontColor: "rgba(255,255,255,.7)",
-              },
-              display: true,
+              display: false,
               scaleLabel: {
-                display: false,
+                display: true,
                 labelString: "Month",
-                fontColor: "white",
               },
               gridLines: {
-                display: false,
                 borderDash: [2],
                 borderDashOffset: [2],
                 color: "rgba(33, 37, 41, 0.3)",
-                zeroLineColor: "rgba(0, 0, 0, 0)",
+                zeroLineColor: "rgba(33, 37, 41, 0.3)",
                 zeroLineBorderDash: [2],
                 zeroLineBorderDashOffset: [2],
               },
@@ -80,21 +71,17 @@ export default function CardLineChart() {
           ],
           yAxes: [
             {
-              ticks: {
-                fontColor: "rgba(255,255,255,.7)",
-              },
               display: true,
               scaleLabel: {
                 display: false,
                 labelString: "Value",
-                fontColor: "white",
               },
               gridLines: {
-                borderDash: [3],
-                borderDashOffset: [3],
+                borderDash: [2],
                 drawBorder: false,
-                color: "rgba(255, 255, 255, 0.15)",
-                zeroLineColor: "rgba(33, 37, 41, 0)",
+                borderDashOffset: [2],
+                color: "rgba(33, 37, 41, 0.2)",
+                zeroLineColor: "rgba(33, 37, 41, 0.15)",
                 zeroLineBorderDash: [2],
                 zeroLineBorderDashOffset: [2],
               },
@@ -103,26 +90,28 @@ export default function CardLineChart() {
         },
       },
     };
-    var ctx = document.getElementById("line-chart").getContext("2d");
-    window.myLine = new Chart(ctx, config);
+    let ctx = document.getElementById("bar-chart-staff").getContext("2d");
+    window.myBar = new Chart(ctx, config);
   }, []);
   return (
     <>
-      <div className="relative flex flex-col w-full min-w-0 mb-6 break-words rounded shadow-lg bg-blueGray-700">
+      <div className="relative flex flex-col w-full min-w-0 mb-6 break-words bg-white rounded shadow-lg">
         <div className="px-4 py-3 mb-0 bg-transparent rounded-t">
           <div className="flex flex-wrap items-center">
             <div className="relative flex-1 flex-grow w-full max-w-full">
-              <h6 className="mb-1 text-xs font-semibold uppercase text-blueGray-100">
-                Overview
+              <h6 className="mb-1 text-xs font-semibold uppercase text-blueGray-400">
+                Performance
               </h6>
-              <h2 className="text-xl font-semibold text-white">Students VS Staff Attendance</h2>
+              <h2 className="text-xl font-semibold text-blueGray-700">
+                Staff Leave VS Attendance
+              </h2>
             </div>
           </div>
         </div>
         <div className="flex-auto p-4">
           {/* Chart */}
           <div className="relative h-350-px">
-            <canvas id="line-chart"></canvas>
+            <canvas id="bar-chart-staff"></canvas>
           </div>
         </div>
       </div>
