@@ -2,7 +2,7 @@ import React from "react";
 
 // components
 
-import CardTable from "components/Cards/CardTable.js";
+import CardManageStudents from "components/Cards/CardManageStudents";
 
 // layout for page
 
@@ -13,7 +13,7 @@ export default function Tables() {
     <>
       <div className="flex flex-wrap mt-4">
         <div className="w-full px-4 mb-12">
-          <CardTable />
+          <CardManageStudents />
         </div>
         {/* <div className="w-full px-4 mb-12">
           <CardTable color="dark" />
