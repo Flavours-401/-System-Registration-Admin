@@ -114,30 +114,6 @@ export default function Sidebar() {
               </li>
 
               <li className="items-center">
-                <Link href="/admin/settings">
-                  <a
-                    href="#pablo"
-                    className={
-                      "text-xs uppercase py-3 font-bold block " +
-                      (router.pathname.indexOf("/admin/settings") !== -1
-                        ? "text-lightBlue-500 hover:text-lightBlue-600"
-                        : "text-blueGray-700 hover:text-blueGray-500")
-                    }
-                  >
-                    <i
-                      className={
-                        "fas fa-tools mr-2 text-sm " +
-                        (router.pathname.indexOf("/admin/settings") !== -1
-                          ? "opacity-75"
-                          : "text-blueGray-300")
-                      }
-                    ></i>{" "}
-                    Manage Staff
-                  </a>
-                </Link>
-              </li>
-
-              <li className="items-center">
                 <Link href="/admin/tables">
                   <a
                     href="#pablo"
@@ -150,8 +126,32 @@ export default function Sidebar() {
                   >
                     <i
                       className={
-                        "fas fa-table mr-2 text-sm " +
+                        "fas fa-tools mr-2 text-sm " +
                         (router.pathname.indexOf("/admin/tables") !== -1
+                          ? "opacity-75"
+                          : "text-blueGray-300")
+                      }
+                    ></i>{" "}
+                    Manage Staff
+                  </a>
+                </Link>
+              </li>
+
+              <li className="items-center">
+                <Link href="/admin/addStaff">
+                  <a
+                    href="#pablo"
+                    className={
+                      "text-xs uppercase py-3 font-bold block " +
+                      (router.pathname.indexOf("/admin/addStaff") !== -1
+                        ? "text-lightBlue-500 hover:text-lightBlue-600"
+                        : "text-blueGray-700 hover:text-blueGray-500")
+                    }
+                  >
+                    <i
+                      className={
+                        "fas fa-table mr-2 text-sm " +
+                        (router.pathname.indexOf("/admin/addStaff") !== -1
                           ? "opacity-75"
                           : "text-blueGray-300")
                       }
