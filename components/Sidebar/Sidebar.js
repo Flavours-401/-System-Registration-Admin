@@ -353,7 +353,7 @@ export default function Sidebar() {
                   </a>
                 </Link>
               </li>
-              <li className="items-center">
+              {/* <li className="items-center">
                 <Link href="/admin/settings">
                   <a
                     href="#pablo"
@@ -471,7 +471,7 @@ export default function Sidebar() {
                     Staff leave
                   </a>
                 </Link>
-              </li>
+              </li> */}
             </ul>
 
            

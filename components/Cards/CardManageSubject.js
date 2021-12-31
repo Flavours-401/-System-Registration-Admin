@@ -3,9 +3,9 @@ import PropTypes from "prop-types";
 
 // components
 
-import TableDropdown from "components/Dropdowns/TableDropdown.js";
+// import TableDropdown from "components/Dropdowns/TableDropdown.js";
 
-export default function CardTable({ color }) {
+export default function CardManageSubject({ color }) {
   return (
     <>
       <div
@@ -23,8 +23,8 @@ export default function CardTable({ color }) {
                   (color === "light" ? "text-blueGray-700" : "text-white")
                 }
               >
-                Table
-              </h3>
+               Subject Details
+               </h3>
             </div>
           </div>
         </div>
@@ -51,7 +51,7 @@ export default function CardTable({ color }) {
                       : "bg-blueGray-600 text-blueGray-200 border-blueGray-500")
                   }
                 >
-                  First Name
+                  Subject Name
                 </th>
                 <th
                   className={
@@ -61,7 +61,7 @@ export default function CardTable({ color }) {
                       : "bg-blueGray-600 text-blueGray-200 border-blueGray-500")
                   }
                 >
-                  Last Name
+                  Course
                 </th>
                 <th
                   className={
@@ -71,7 +71,7 @@ export default function CardTable({ color }) {
                       : "bg-blueGray-600 text-blueGray-200 border-blueGray-500")
                   }
                 >
-                  Username
+                  Staff
                 </th>
                 <th
                   className={
@@ -81,7 +81,7 @@ export default function CardTable({ color }) {
                       : "bg-blueGray-600 text-blueGray-200 border-blueGray-500")
                   }
                 >
-                  Email
+                  Created At
                 </th>
                 <th
                   className={
@@ -91,29 +91,9 @@ export default function CardTable({ color }) {
                       : "bg-blueGray-600 text-blueGray-200 border-blueGray-500")
                   }
                 >
-                  Address
-                </th>              
-                <th
-                  className={
-                    "px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left " +
-                    (color === "light"
-                      ? "bg-blueGray-50 text-blueGray-500 border-blueGray-100"
-                      : "bg-blueGray-600 text-blueGray-200 border-blueGray-500")
-                  }
-                >
-                  Last Login
+                  Updated At
                 </th>
-                <th
-                  className={
-                    "px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left " +
-                    (color === "light"
-                      ? "bg-blueGray-50 text-blueGray-500 border-blueGray-100"
-                      : "bg-blueGray-600 text-blueGray-200 border-blueGray-500")
-                  }
-                >
-                  Date Joined
-                </th>
-                <th
+                              <th
                   className={
                     "px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left " +
                     (color === "light"
@@ -123,88 +103,40 @@ export default function CardTable({ color }) {
                 >
                   Action
                 </th>
-
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <th className="flex items-center p-4 px-6 text-xs text-left align-middle border-t-0 border-l-0 border-r-0 whitespace-nowrap">
-                  <img
-                    src="/img/bootstrap.jpg"
-                    className="w-12 h-12 bg-white border rounded-full"
-                    alt="..."
-                  ></img>{" "}
-                  <span
-                    className={
-                      "ml-3 font-bold " +
-                      +(color === "light" ? "text-blueGray-600" : "text-white")
-                    }
-                  >
-                    Argon Design System
-                  </span>
+              <tr className="p-4 px-6 text-xs align-middle border-t-0 border-l-0 border-r-0 whitespace-nowrap">
+                <th className="p-4 px-6 text-xs align-middle border-t-0 border-l-0 border-r-0 whitespace-nowrap">
+                 
+                    1
+                
                 </th>
-                <td className="p-4 px-6 text-xs align-middle border-t-0 border-l-0 border-r-0 whitespace-nowrap">
-                  $2,500 USD
+                <td >
+                  Django
                 </td>
-                <td className="p-4 px-6 text-xs align-middle border-t-0 border-l-0 border-r-0 whitespace-nowrap">
-                  <i className="mr-2 text-orange-500 fas fa-circle"></i> pending
+                <td >
+                  Python
                 </td>
-                <td className="p-4 px-6 text-xs align-middle border-t-0 border-l-0 border-r-0 whitespace-nowrap">
-                  <div className="flex">
-                    <img
-                      src="/img/team-1-800x800.jpg"
-                      alt="..."
-                      className="w-10 h-10 border-2 rounded-full shadow border-blueGray-50"
-                    ></img>
-                    <img
-                      src="/img/team-2-800x800.jpg"
-                      alt="..."
-                      className="w-10 h-10 -ml-4 border-2 rounded-full shadow border-blueGray-50"
-                    ></img>
-                    <img
-                      src="/img/team-3-800x800.jpg"
-                      alt="..."
-                      className="w-10 h-10 -ml-4 border-2 rounded-full shadow border-blueGray-50"
-                    ></img>
-                    <img
-                      src="/img/team-4-470x470.png"
-                      alt="..."
-                      className="w-10 h-10 -ml-4 border-2 rounded-full shadow border-blueGray-50"
-                    ></img>
-                  </div>
+                <td >
+                
+                    Staff
+              
                 </td>
-                <td className="p-4 px-6 text-xs align-middle border-t-0 border-l-0 border-r-0 whitespace-nowrap">
-                  <div className="flex items-center">
-                    <span className="mr-2">60%</span>
-                    <div className="relative w-full">
-                      <div className="flex h-2 overflow-hidden text-xs bg-red-200 rounded">
-                        <div
-                          style={{ width: "60%" }}
-                          className="flex flex-col justify-center text-center text-white bg-red-500 shadow-none whitespace-nowrap"
-                        ></div>
-                      </div>
-                    </div>
-                  </div>
+                <td >
+                
+                Dec. 30, 2021, 9:40 a.m.
+                   
+                 
                 </td>
-                <td>
-
-                </td>
-                <td>
-
-                </td>
-                <td>
-
+                <td >
+                Dec. 30, 2021, 9:40 a.m.
                 </td>
                 <td>
                   <button>Edit</button>
                   <button>Delete</button>
                 </td>
 
-
-
-                <td className="p-4 px-6 text-xs text-right align-middle border-t-0 border-l-0 border-r-0 whitespace-nowrap">
-                  {/* <TableDropdown /> */}
-                </td>
               </tr>
             </tbody>
           </table>
@@ -214,10 +146,10 @@ export default function CardTable({ color }) {
   );
 }
 
-CardTable.defaultProps = {
+CardManageSubject.defaultProps = {
   color: "light",
 };
 
-CardTable.propTypes = {
+CardManageSubject.propTypes = {
   color: PropTypes.oneOf(["light", "dark"]),
 };
