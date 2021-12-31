@@ -8,7 +8,7 @@ import StudentChart from "components/Cards/StudentAttendanceLeave.js";
 import CardPageVisits from "components/Cards/CardPageVisits.js";
 import CardSocialTraffic from "components/Cards/CardSocialTraffic.js";
 import CardPieChart from "components/Cards/CardPieChart.js";
-import CardPieChart1 from "components/Cards/CardPieChart1.js";
+// import CardPieChart1 from "components/Cards/CardPieChart1.js";
 
 // layout for page
 

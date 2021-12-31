@@ -114,12 +114,12 @@ export default function Sidebar() {
               </li>
 
               <li className="items-center">
-                <Link href="/admin/tables">
+                <Link href="/admin/ManageStaff">
                   <a
                     href="#pablo"
                     className={
                       "text-xs uppercase py-3 font-bold block " +
-                      (router.pathname.indexOf("/admin/tables") !== -1
+                      (router.pathname.indexOf("/admin/ManageStaff") !== -1
                         ? "text-lightBlue-500 hover:text-lightBlue-600"
                         : "text-blueGray-700 hover:text-blueGray-500")
                     }
@@ -127,7 +127,7 @@ export default function Sidebar() {
                     <i
                       className={
                         "fas fa-tools mr-2 text-sm " +
-                        (router.pathname.indexOf("/admin/tables") !== -1
+                        (router.pathname.indexOf("/admin/ManageStaff") !== -1
                           ? "opacity-75"
                           : "text-blueGray-300")
                       }
@@ -162,12 +162,12 @@ export default function Sidebar() {
               </li>
 
               <li className="items-center">
-                <Link href="/admin/settings">
+                <Link href="/admin/ManageStudent">
                   <a
                     href="#pablo"
                     className={
                       "text-xs uppercase py-3 font-bold block " +
-                      (router.pathname.indexOf("/admin/settings") !== -1
+                      (router.pathname.indexOf("/admin/ManageStudent") !== -1
                         ? "text-lightBlue-500 hover:text-lightBlue-600"
                         : "text-blueGray-700 hover:text-blueGray-500")
                     }
@@ -175,7 +175,7 @@ export default function Sidebar() {
                     <i
                       className={
                         "fas fa-tools mr-2 text-sm " +
-                        (router.pathname.indexOf("/admin/settings") !== -1
+                        (router.pathname.indexOf("/admin/ManageStudent") !== -1
                           ? "opacity-75"
                           : "text-blueGray-300")
                       }
@@ -186,12 +186,12 @@ export default function Sidebar() {
               </li>
 
               <li className="items-center">
-                <Link href="/admin/tables">
+                <Link href="/admin/addStudent">
                   <a
                     href="#pablo"
                     className={
                       "text-xs uppercase py-3 font-bold block " +
-                      (router.pathname.indexOf("/admin/tables") !== -1
+                      (router.pathname.indexOf("/admin/addStudent") !== -1
                         ? "text-lightBlue-500 hover:text-lightBlue-600"
                         : "text-blueGray-700 hover:text-blueGray-500")
                     }
@@ -199,7 +199,7 @@ export default function Sidebar() {
                     <i
                       className={
                         "fas fa-table mr-2 text-sm " +
-                        (router.pathname.indexOf("/admin/tables") !== -1
+                        (router.pathname.indexOf("/admin/addStudent") !== -1
                           ? "opacity-75"
                           : "text-blueGray-300")
                       }
@@ -210,12 +210,12 @@ export default function Sidebar() {
               </li>
 
               <li className="items-center">
-                <Link href="/admin/settings">
+                <Link href="/admin/ManageCourse">
                   <a
                     href="#pablo"
                     className={
                       "text-xs uppercase py-3 font-bold block " +
-                      (router.pathname.indexOf("/admin/settings") !== -1
+                      (router.pathname.indexOf("/admin/ManageCourse") !== -1
                         ? "text-lightBlue-500 hover:text-lightBlue-600"
                         : "text-blueGray-700 hover:text-blueGray-500")
                     }
@@ -223,7 +223,7 @@ export default function Sidebar() {
                     <i
                       className={
                         "fas fa-tools mr-2 text-sm " +
-                        (router.pathname.indexOf("/admin/settings") !== -1
+                        (router.pathname.indexOf("/admin/ManageCourse") !== -1
                           ? "opacity-75"
                           : "text-blueGray-300")
                       }
@@ -234,12 +234,12 @@ export default function Sidebar() {
               </li>
 
               <li className="items-center">
-                <Link href="/admin/tables">
+                <Link href="/admin/addCourse">
                   <a
                     href="#pablo"
                     className={
                       "text-xs uppercase py-3 font-bold block " +
-                      (router.pathname.indexOf("/admin/tables") !== -1
+                      (router.pathname.indexOf("/admin/addCourse") !== -1
                         ? "text-lightBlue-500 hover:text-lightBlue-600"
                         : "text-blueGray-700 hover:text-blueGray-500")
                     }
@@ -247,7 +247,7 @@ export default function Sidebar() {
                     <i
                       className={
                         "fas fa-table mr-2 text-sm " +
-                        (router.pathname.indexOf("/admin/tables") !== -1
+                        (router.pathname.indexOf("/admin/addCourse") !== -1
                           ? "opacity-75"
                           : "text-blueGray-300")
                       }
@@ -259,12 +259,12 @@ export default function Sidebar() {
 
 
               <li className="items-center">
-                <Link href="/admin/settings">
+                <Link href="/admin/ManageSubject">
                   <a
                     href="#pablo"
                     className={
                       "text-xs uppercase py-3 font-bold block " +
-                      (router.pathname.indexOf("/admin/settings") !== -1
+                      (router.pathname.indexOf("/admin/ManageSubject") !== -1
                         ? "text-lightBlue-500 hover:text-lightBlue-600"
                         : "text-blueGray-700 hover:text-blueGray-500")
                     }
@@ -272,7 +272,7 @@ export default function Sidebar() {
                     <i
                       className={
                         "fas fa-tools mr-2 text-sm " +
-                        (router.pathname.indexOf("/admin/settings") !== -1
+                        (router.pathname.indexOf("/admin/ManageSubject") !== -1
                           ? "opacity-75"
                           : "text-blueGray-300")
                       }
@@ -283,12 +283,12 @@ export default function Sidebar() {
               </li>
 
               <li className="items-center">
-                <Link href="/admin/tables">
+                <Link href="/admin/addSubject">
                   <a
                     href="#pablo"
                     className={
                       "text-xs uppercase py-3 font-bold block " +
-                      (router.pathname.indexOf("/admin/tables") !== -1
+                      (router.pathname.indexOf("/admin/addSubject") !== -1
                         ? "text-lightBlue-500 hover:text-lightBlue-600"
                         : "text-blueGray-700 hover:text-blueGray-500")
                     }
@@ -296,7 +296,7 @@ export default function Sidebar() {
                     <i
                       className={
                         "fas fa-table mr-2 text-sm " +
-                        (router.pathname.indexOf("/admin/tables") !== -1
+                        (router.pathname.indexOf("/admin/addSubject") !== -1
                           ? "opacity-75"
                           : "text-blueGray-300")
                       }
@@ -307,12 +307,12 @@ export default function Sidebar() {
               </li>
 
               <li className="items-center">
-                <Link href="/admin/settings">
+                <Link href="/admin/ManageSession">
                   <a
                     href="#pablo"
                     className={
                       "text-xs uppercase py-3 font-bold block " +
-                      (router.pathname.indexOf("/admin/settings") !== -1
+                      (router.pathname.indexOf("/admin/ManageSession") !== -1
                         ? "text-lightBlue-500 hover:text-lightBlue-600"
                         : "text-blueGray-700 hover:text-blueGray-500")
                     }
@@ -320,7 +320,7 @@ export default function Sidebar() {
                     <i
                       className={
                         "fas fa-tools mr-2 text-sm " +
-                        (router.pathname.indexOf("/admin/settings") !== -1
+                        (router.pathname.indexOf("/admin/ManageSession") !== -1
                           ? "opacity-75"
                           : "text-blueGray-300")
                       }
@@ -331,12 +331,12 @@ export default function Sidebar() {
               </li>
 
               <li className="items-center">
-                <Link href="/admin/tables">
+                <Link href="/admin/addSession">
                   <a
                     href="#pablo"
                     className={
                       "text-xs uppercase py-3 font-bold block " +
-                      (router.pathname.indexOf("/admin/tables") !== -1
+                      (router.pathname.indexOf("/admin/addSession") !== -1
                         ? "text-lightBlue-500 hover:text-lightBlue-600"
                         : "text-blueGray-700 hover:text-blueGray-500")
                     }
@@ -344,7 +344,7 @@ export default function Sidebar() {
                     <i
                       className={
                         "fas fa-table mr-2 text-sm " +
-                        (router.pathname.indexOf("/admin/tables") !== -1
+                        (router.pathname.indexOf("/admin/addSession") !== -1
                           ? "opacity-75"
                           : "text-blueGray-300")
                       }
