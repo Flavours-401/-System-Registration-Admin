@@ -1,7 +1,7 @@
 import React from "react";
 import Chart from "chart.js";
 
-export default function CardPieChart(props) {
+export default function CardPieChart1(props) {
   React.useEffect(() => {
     var config = {
       type: "doughnut",
@@ -11,7 +11,7 @@ export default function CardPieChart(props) {
       },
       
         };
-        let ctx = document.getElementById(props.pieChartId).getContext("2d");
+        let ctx = document.getElementById("Pie-chart-staff1").getContext("2d");
           window.myBar = new Chart(ctx, config);
   },);
   return (
@@ -30,7 +30,7 @@ export default function CardPieChart(props) {
         <div className="flex-auto p-4">
           {/* Chart */}
           <div className="relative h-50-px">
-            <canvas id={props.pieChartId}></canvas>
+            <canvas id="Pie-chart-staff1"></canvas>
           </div>
         </div>
       </div>
