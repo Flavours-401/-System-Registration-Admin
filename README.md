@@ -1,4 +1,4 @@
-# System-Registration-API
+# Students Registration System (Admin)
 
 # Name of Project : Registration Sysytem
 
