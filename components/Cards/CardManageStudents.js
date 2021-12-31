@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 
 // import TableDropdown from "components/Dropdowns/TableDropdown.js";
 
-export default function CardTable({ color }) {
+export default function CardManageStudents({ color }) {
   return (
     <>
       <div
@@ -23,8 +23,15 @@ export default function CardTable({ color }) {
                   (color === "light" ? "text-blueGray-700" : "text-white")
                 }
               >
-                Table
+                Manage Student
               </h3>
+              {/* <button
+              className="px-4 py-2 mr-1 text-xs font-bold text-white uppercase transition-all duration-150 ease-linear rounded shadow outline-none bg-blueGray-700 active:bg-blueGray-600 hover:shadow-md focus:outline-none"
+              type="button"
+            >
+              add student
+              {/* {props.formName} */}
+            {/* </button>  */}
             </div>
           </div>
         </div>
@@ -92,16 +99,6 @@ export default function CardTable({ color }) {
                   }
                 >
                   Address
-                </th>              
-                <th
-                  className={
-                    "px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left " +
-                    (color === "light"
-                      ? "bg-blueGray-50 text-blueGray-500 border-blueGray-100"
-                      : "bg-blueGray-600 text-blueGray-200 border-blueGray-500")
-                  }
-                >
-                  Last Login
                 </th>
                 <th
                   className={
@@ -111,7 +108,7 @@ export default function CardTable({ color }) {
                       : "bg-blueGray-600 text-blueGray-200 border-blueGray-500")
                   }
                 >
-                  Date Joined
+                  Gender
                 </th>
                 <th
                   className={
@@ -121,7 +118,7 @@ export default function CardTable({ color }) {
                       : "bg-blueGray-600 text-blueGray-200 border-blueGray-500")
                   }
                 >
-                  Action
+                  Profile Pic
                 </th>
                 <th
                   className={
@@ -131,7 +128,7 @@ export default function CardTable({ color }) {
                       : "bg-blueGray-600 text-blueGray-200 border-blueGray-500")
                   }
                 >
-                  Email
+                  Start Year
                 </th>
                 <th
                   className={
@@ -141,8 +138,18 @@ export default function CardTable({ color }) {
                       : "bg-blueGray-600 text-blueGray-200 border-blueGray-500")
                   }
                 >
-                  Address
-                </th>              
+                  End Year
+                </th>
+                <th
+                  className={
+                    "px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left " +
+                    (color === "light"
+                      ? "bg-blueGray-50 text-blueGray-500 border-blueGray-100"
+                      : "bg-blueGray-600 text-blueGray-200 border-blueGray-500")
+                  }
+                >
+                  Course
+                </th>
                 <th
                   className={
                     "px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left " +
@@ -176,84 +183,61 @@ export default function CardTable({ color }) {
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <th className="flex items-center p-4 px-6 text-xs text-left align-middle border-t-0 border-l-0 border-r-0 whitespace-nowrap">
-                  <img
-                    src="/img/bootstrap.jpg"
-                    className="w-12 h-12 bg-white border rounded-full"
-                    alt="..."
-                  ></img>{" "}
-                  <span
-                    className={
-                      "ml-3 font-bold " +
-                      +(color === "light" ? "text-blueGray-600" : "text-white")
-                    }
-                  >
-                    Argon Design System
-                  </span>
+              <tr className="p-4 px-6 text-xs align-middle border-t-0 border-l-0 border-r-0 whitespace-nowrap">
+                <th className="p-4 px-6 text-xs align-middle border-t-0 border-l-0 border-r-0 whitespace-nowrap">
+                 
+                    4
+                
                 </th>
-                <td className="p-4 px-6 text-xs align-middle border-t-0 border-l-0 border-r-0 whitespace-nowrap">
-                  $2,500 USD
+                <td >
+                  Razan
                 </td>
-                <td className="p-4 px-6 text-xs align-middle border-t-0 border-l-0 border-r-0 whitespace-nowrap">
-                  <i className="mr-2 text-orange-500 fas fa-circle"></i> pending
+                <td >
+                  Armouti
                 </td>
-                <td className="p-4 px-6 text-xs align-middle border-t-0 border-l-0 border-r-0 whitespace-nowrap">
-                  <div className="flex">
-                    <img
-                      src="/img/team-1-800x800.jpg"
-                      alt="..."
-                      className="w-10 h-10 border-2 rounded-full shadow border-blueGray-50"
-                    ></img>
-                    <img
-                      src="/img/team-2-800x800.jpg"
-                      alt="..."
-                      className="w-10 h-10 -ml-4 border-2 rounded-full shadow border-blueGray-50"
-                    ></img>
-                    <img
-                      src="/img/team-3-800x800.jpg"
-                      alt="..."
-                      className="w-10 h-10 -ml-4 border-2 rounded-full shadow border-blueGray-50"
-                    ></img>
-                    <img
-                      src="/img/team-4-470x470.png"
-                      alt="..."
-                      className="w-10 h-10 -ml-4 border-2 rounded-full shadow border-blueGray-50"
-                    ></img>
-                  </div>
+                <td >
+                
+                    razan
+              
                 </td>
-                <td className="p-4 px-6 text-xs align-middle border-t-0 border-l-0 border-r-0 whitespace-nowrap">
-                  <div className="flex items-center">
-                    <span className="mr-2">60%</span>
-                    <div className="relative w-full">
-                      <div className="flex h-2 overflow-hidden text-xs bg-red-200 rounded">
-                        <div
-                          style={{ width: "60%" }}
-                          className="flex flex-col justify-center text-center text-white bg-red-500 shadow-none whitespace-nowrap"
-                        ></div>
-                      </div>
-                    </div>
-                  </div>
+                <td >
+                
+                   razanarmote@yahoo.com
+                   
+                 
+                </td>
+                <td >
+                  amman
+                </td>
+                <td >
+                  Female
+                </td>
+                <td >
+                  pic
+                </td>
+                <td >
+                  June 1, 2021
+                </td>
+
+
+
+                <td >
+                Jan. 8, 2022
+                </td>
+                <td >
+                Python
                 </td>
                 <td>
-
+                None
                 </td>
                 <td>
-
-                </td>
-                <td>
-
+                Dec. 30, 2021, 9:47 a.m.
                 </td>
                 <td>
                   <button>Edit</button>
                   <button>Delete</button>
                 </td>
 
-
-
-                <td className="p-4 px-6 text-xs text-right align-middle border-t-0 border-l-0 border-r-0 whitespace-nowrap">
-                  {/* <TableDropdown /> */}
-                </td>
               </tr>
             </tbody>
           </table>
@@ -263,10 +247,10 @@ export default function CardTable({ color }) {
   );
 }
 
-CardTable.defaultProps = {
+CardManageStudents.defaultProps = {
   color: "light",
 };
 
-CardTable.propTypes = {
+CardManageStudents.propTypes = {
   color: PropTypes.oneOf(["light", "dark"]),
 };
