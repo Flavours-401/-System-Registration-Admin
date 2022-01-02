@@ -5,8 +5,8 @@ import React from "react";
 import CardLineChart from "components/Cards/CardLineChart.js";
 import StaffChart from "components/Cards/StaffAttendanceLeave.js";
 import StudentChart from "components/Cards/StudentAttendanceLeave.js";
-import CardPageVisits from "components/Cards/CardPageVisits.js";
-import CardSocialTraffic from "components/Cards/CardSocialTraffic.js";
+// import CardPageVisits from "components/Cards/CardPageVisits.js";
+// import CardSocialTraffic from "components/Cards/CardSocialTraffic.js";
 import CardPieChart from "components/Cards/CardPieChart.js";
 // import CardPieChart1 from "components/Cards/CardPieChart1.js";
 
@@ -84,7 +84,7 @@ export default function Dashboard() {
         </div>
       </div>
       
-      <div className="flex flex-wrap mt-4">     {/* can be deleted if not used */}
+      {/* <div className="flex flex-wrap mt-4">    
         <div className="w-full px-4 mb-12 xl:w-8/12 xl:mb-0">
           <CardPageVisits />
         </div>
@@ -92,7 +92,7 @@ export default function Dashboard() {
           <CardSocialTraffic />
         </div>
 
-      </div>
+      </div> */}
     </>
   );
 }

@@ -1,4 +1,6 @@
 import React from "react";
+import Link from "next/link";
+
 
 export default function Footer() {
   return (
@@ -26,9 +28,9 @@ export default function Footer() {
         <div className="container px-4 mx-auto">
           <div className="flex flex-wrap text-center lg:text-left">
             <div className="w-full px-4 lg:w-6/12">
-              <h4 className="text-3xl font-semibold">Let's keep in touch!</h4>
+              <h4 className="text-3xl font-semibold">Keep in touch with us </h4>
               <h5 className="mt-0 mb-2 text-lg text-blueGray-600">
-                Find us on any of these platforms, we respond 1-2 business days.
+                Follow us on social media platforms.
               </h5>
               <div className="mt-6 mb-6 lg:mb-0">
                 <button
@@ -43,7 +45,7 @@ export default function Footer() {
                 >
                   <i className="fab fa-facebook-square"></i>
                 </button>
-                <button
+                {/* <button
                   className="items-center justify-center w-10 h-10 mr-2 font-normal text-pink-400 bg-white rounded-full shadow-lg outline-none align-center focus:outline-none"
                   type="button"
                 >
@@ -54,7 +56,7 @@ export default function Footer() {
                   type="button"
                 >
                   <i className="fab fa-github"></i>
-                </button>
+                </button> */}
               </div>
             </div>
             <div className="w-full px-4 lg:w-6/12">
@@ -65,21 +67,24 @@ export default function Footer() {
                   </span>
                   <ul className="list-unstyled">
                     <li>
-                      <a
-                        className="block pb-2 text-sm font-semibold text-blueGray-600 hover:text-blueGray-800"
-                        href="https://www.creative-tim.com/presentation?ref=nnjs-footer"
-                      >
-                        About Us
-                      </a>
+                    <Link href="pages/About_us.js">
+          <a
+            href="About_us"
+           
+          >
+            About us
+          </a>
+        </Link>
                     </li>
-                    <li>
+                    {/* <li>
                       <a
                         className="block pb-2 text-sm font-semibold text-blueGray-600 hover:text-blueGray-800"
                         href="https://creative-tim.com/contact-us?ref=nnjs-footer"
                       >
                         Contact Us
+                        
                       </a>
-                    </li>
+                    </li> */}
                
                   </ul>
                 </div>

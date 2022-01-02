@@ -4,6 +4,9 @@ import Link from "next/link";
 
 import IndexNavbar from "components/Navbars/IndexNavbar.js";
 import Footer from "components/Footers/Footer.js";
+import About_us from "./About_us";
+import { Container } from "next/app";
+import Contact_us from "./Contact_us";
 
 export default function Index() {
   return (
@@ -25,7 +28,8 @@ export default function Index() {
                   target="_blank"
                   className="px-6 py-4 mb-1 mr-1 text-sm font-bold text-white uppercase transition-all duration-150 ease-linear rounded shadow outline-none get-started focus:outline-none bg-blueGray-400 active:bg-blueGray-500 hover:shadow-lg"
                 >
-                  <a>Login</a>
+                  <a className="px-6 py-4 mt-12 mb-1 mr-1 text-sm font-bold text-white uppercase transition-all duration-150 ease-linear rounded shadow outline-none get-started focus:outline-none bg-blueGray-400 active:bg-blueGray-500 hover:shadow-lg"
+                >Login</a>
                 </Link>
              
               </div>
@@ -46,7 +50,7 @@ export default function Index() {
         </div>
         <img
           className="absolute top-0 right-0 w-10/12 pt-16 -mt-48 b-auto sm:w-6/12 sm:mt-0 max-h-860-px"
-          src="/img/pattern_nextjs.png"
+          src="https://www.tailwindtoolbox.com/templates/hero.png"
           alt="..."
         />
       </section>
@@ -77,7 +81,7 @@ export default function Index() {
               <div className="relative flex flex-col w-full min-w-0 mb-6 break-words bg-white rounded-lg shadow-lg bg-blueGray-700">
                 <img
                   alt="..."
-                  src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=80"
+                  src="https://www.carroll.edu/sites/default/files/styles/adaptive_800/public/content/resources/computer-labs/hero-image/computer-lab.jpg?itok=p28c0Yys"
                   className="w-full align-middle rounded-t-lg"
                 />
                 <blockquote className="relative p-8 mb-4">
@@ -93,11 +97,9 @@ export default function Index() {
                     ></polygon>
                   </svg>
                   <h4 className="text-xl font-bold text-white">
-                    SMS - Intro1
+                    Student Management System is a powerful tool that enables the college Director, teaching staff and students as well to register & manage their data through their learning Journey.
                   </h4>
-                  <p className="mt-2 font-light text-white text-md">
-                    SMS - Intro1 -------------------
-                  </p>
+                  
                 </blockquote>
               </div>
             </div>
@@ -111,10 +113,10 @@ export default function Index() {
                         <i className="fas fa-sitemap"></i>
                       </div>
                       <h6 className="mb-1 text-xl font-semibold">
-                        SMS-CSS Components
+                      Add and manage staff and student daily activates.
                       </h6>
                       <p className="mb-4 text-blueGray-500">
-                        SMS-CSS Components
+                        With daily analysis.
                       </p>
                     </div>
                   </div>
@@ -124,10 +126,10 @@ export default function Index() {
                         <i className="fas fa-drafting-compass"></i>
                       </div>
                       <h6 className="mb-1 text-xl font-semibold">
-                        SMS-JavaScript Components
+                        The Head of Department (Admin) have control and access on both Staff & Students.
                       </h6>
                       <p className="mb-4 text-blueGray-500">
-                        SMS-JavaScript Components
+                        Admin has no restrictions to manage Data.
                       </p>
                     </div>
                   </div>
@@ -138,9 +140,9 @@ export default function Index() {
                       <div className="inline-flex items-center justify-center w-12 h-12 p-3 mb-5 text-center bg-white rounded-full shadow-lg text-blueGray-500">
                         <i className="fas fa-newspaper"></i>
                       </div>
-                      <h6 className="mb-1 text-xl font-semibold">SMS-Pages</h6>
+                      <h6 className="mb-1 text-xl font-semibold">Students can manage their session & select study topic for their courses.</h6>
                       <p className="mb-4 text-blueGray-500">
-                        SMS-Pages
+                        {/* Such as a student can select Django class from Python course. */}
                       </p>
                     </div>
                   </div>
@@ -150,10 +152,10 @@ export default function Index() {
                         <i className="fas fa-file-alt"></i>
                       </div>
                       <h6 className="mb-1 text-xl font-semibold">
-                        SMS-Documentation
+                        Easy to register as a student and keep track of your studies. Add a course, choose a topic from that course and start learning.
                       </h6>
                       <p className="mb-4 text-blueGray-500">
-                        SMS-Documentation
+                        Teaching staff can control their students data in each class.
                       </p>
                     </div>
                   </div>
@@ -164,8 +166,8 @@ export default function Index() {
         </div>
 
         <div className="container pb-20 mx-auto overflow-hidden">
-          <div className="flex flex-wrap items-center">
-            <div className="w-full px-12 mt-48 ml-auto mr-auto md:w-4/12 md:px-4">
+          {/* <div className="flex flex-wrap items-center"> */}
+            {/* <div className="w-full px-12 mt-48 ml-auto mr-auto md:w-4/12 md:px-4">
               <div className="inline-flex items-center justify-center w-16 h-16 p-3 mb-6 text-center bg-white rounded-full shadow-lg text-blueGray-500">
                 <i className="text-xl fas fa-sitemap"></i>
               </div>
@@ -209,8 +211,7 @@ export default function Index() {
                 View All{" "}
                 <i className="ml-1 leading-relaxed fa fa-angle-double-right"></i>
               </a>
-            </div>
-
+            </div>  
             <div className="w-full px-4 mt-32 ml-auto mr-auto md:w-5/12">
               <div className="relative flex flex-col w-full min-w-0 mt-48 mb-6 md:mt-0">
                 <img
@@ -245,9 +246,9 @@ export default function Index() {
                 />
               </div>
             </div>
-          </div>
+          </div> */}
 
-          <div className="flex flex-wrap items-center pt-32">
+          {/* <div className="flex flex-wrap items-center pt-0">
             <div className="w-full px-4 mt-32 ml-auto mr-auto md:w-6/12">
               <div className="relative flex flex-wrap justify-center">
                 <div className="w-full px-4 my-4 lg:w-6/12">
@@ -255,14 +256,14 @@ export default function Index() {
                     href="https://www.creative-tim.com/learning-lab/tailwind/svelte/alerts/notus?ref=vtw-index"
                     target="_blank"
                   >
-                    <div className="p-8 text-center bg-red-600 rounded-lg shadow-lg">
+                    <div className="p-8 text-center bg-red-600 rounded-lg shadow-lg  hover:opacity-100 duration-300">
                       <img
                         alt="..."
-                        className="w-16 max-w-full p-2 mx-auto bg-white rounded-full shadow-md"
+                        className="w-16 max-w-full p-2 mx-auto bg-white rounded-full shadow-md "
                         src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/svelte.jpg"
                       />
-                      <p className="mt-4 text-lg font-semibold text-white">
-                        Svelte
+                      <p className="mt-4 text-lg font-semibold text-white ">
+                        Latest News
                       </p>
                     </div>
                   </a>
@@ -277,7 +278,7 @@ export default function Index() {
                         src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/react.jpg"
                       />
                       <p className="mt-4 text-lg font-semibold text-white">
-                        ReactJS
+                       Semester Calendar
                       </p>
                     </div>
                   </a>
@@ -292,7 +293,7 @@ export default function Index() {
                         src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/nextjs.jpg"
                       />
                       <p className="mt-4 text-lg font-semibold text-white">
-                        NextJS
+                        Activites
                       </p>
                     </div>
                   </a>
@@ -309,7 +310,7 @@ export default function Index() {
                         src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/js.png"
                       />
                       <p className="mt-4 text-lg font-semibold text-white">
-                        JavaScript
+                        Discover Campus
                       </p>
                     </div>
                   </a>
@@ -324,7 +325,7 @@ export default function Index() {
                         src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/angular.jpg"
                       />
                       <p className="mt-4 text-lg font-semibold text-white">
-                        Angular
+                        Volunteer with us
                       </p>
                     </div>
                   </a>
@@ -339,15 +340,15 @@ export default function Index() {
                         src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/vue.jpg"
                       />
                       <p className="mt-4 text-lg font-semibold text-white">
-                        Vue.js
+                        Study Programs
                       </p>
                     </div>
                   </a>
                 </div>
               </div>
-            </div>
+            </div> */}
 
-            <div className="w-full px-12 mt-48 ml-auto mr-auto md:w-4/12 md:px-4">
+            {/* <div className="w-full px-12 mt-48 ml-auto mr-auto md:w-4/12 md:px-4">
               <div className="inline-flex items-center justify-center w-16 h-16 p-3 mb-6 text-center bg-white rounded-full shadow-lg text-blueGray-500">
                 <i className="text-xl fas fa-drafting-compass"></i>
               </div>
@@ -363,52 +364,22 @@ export default function Index() {
                 We created a set of Components that are dynamic and come to help
                 you.
               </p>
-              <div className="block pb-6">
-                <span className="inline-block px-2 py-1 mt-2 mr-2 text-xs font-semibold uppercase bg-white rounded-full text-blueGray-500 last:mr-0">
-                  Alerts
-                </span>
-                <span className="inline-block px-2 py-1 mt-2 mr-2 text-xs font-semibold uppercase bg-white rounded-full text-blueGray-500 last:mr-0">
-                  Dropdowns
-                </span>
-                <span className="inline-block px-2 py-1 mt-2 mr-2 text-xs font-semibold uppercase bg-white rounded-full text-blueGray-500 last:mr-0">
-                  Menus
-                </span>
-                <span className="inline-block px-2 py-1 mt-2 mr-2 text-xs font-semibold uppercase bg-white rounded-full text-blueGray-500 last:mr-0">
-                  Modals
-                </span>
-                <span className="inline-block px-2 py-1 mt-2 mr-2 text-xs font-semibold uppercase bg-white rounded-full text-blueGray-500 last:mr-0">
-                  Navbars
-                </span>
-                <span className="inline-block px-2 py-1 mt-2 mr-2 text-xs font-semibold uppercase bg-white rounded-full text-blueGray-500 last:mr-0">
-                  Popovers
-                </span>
-                <span className="inline-block px-2 py-1 mt-2 mr-2 text-xs font-semibold uppercase bg-white rounded-full text-blueGray-500 last:mr-0">
-                  Tabs
-                </span>
-                <span className="inline-block px-2 py-1 mt-2 mr-2 text-xs font-semibold uppercase bg-white rounded-full text-blueGray-500 last:mr-0">
-                  Tooltips
-                </span>
-              </div>
-              <a
-                href="https://www.creative-tim.com/learning-lab/tailwind/nextjs/alerts/notus?ref=nnjs-index"
-                target="_blank"
-                className="font-bold transition-all duration-150 ease-linear text-blueGray-700 hover:text-blueGray-500"
-              >
-                View all{" "}
-                <i className="ml-1 leading-relaxed fa fa-angle-double-right"></i>
-              </a>
+              
             </div>
-          </div>
+          </div> */}
         </div>
 
 
       </section>
+     
 
 
 
+      <Contact_us/>
+      <div style={{width: "100%", height: "50px" }}>
+      <Footer/>
 
-
-      <Footer />
+</div>
     </>
   );
 }
