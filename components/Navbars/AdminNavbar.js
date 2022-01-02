@@ -17,7 +17,7 @@ export default function Navbar() {
             Dashboard
           </a>
           {/* Form */}
-          <form className="flex-row flex-wrap items-center hidden mr-3 md:flex lg:ml-auto">
+          {/* <form className="flex-row flex-wrap items-center hidden mr-3 md:flex lg:ml-auto">
             <div className="relative flex flex-wrap items-stretch w-full">
               <span className="absolute z-10 items-center justify-center w-8 h-full py-3 pl-3 text-base font-normal leading-snug text-center bg-transparent rounded text-blueGray-300">
                 <i className="fas fa-search"></i>
@@ -28,7 +28,7 @@ export default function Navbar() {
                 className="relative w-full px-3 py-3 pl-10 text-sm bg-white border-0 rounded shadow outline-none placeholder-blueGray-300 text-blueGray-600 focus:outline-none focus:ring"
               />
             </div>
-          </form>
+          </form> */}
           {/* User */}
           <ul className="flex-col items-center hidden list-none md:flex-row md:flex">
             <UserDropdown />

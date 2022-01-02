@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 export default function FooterSmall(props) {
   return (
@@ -16,33 +17,32 @@ export default function FooterSmall(props) {
             <div className="w-full md:w-4/12 px-4">
               <div className="text-sm text-blueGray-500 font-semibold py-1 text-center md:text-left">
                 Copyright © {new Date().getFullYear()}{" "}
-                <a
-                  href="https://www.creative-tim.com?ref=nnjs-footer-small"
-                  className="text-white hover:text-blueGray-300 text-sm font-semibold py-1"
-                >
-                  Creative Tim
-                </a>
+                
+                  Node 21
+               
               </div>
             </div>
             <div className="w-full md:w-8/12 px-4">
               <ul className="flex flex-wrap list-none md:justify-end  justify-center">
-                <li>
+                {/* <li>
                   <a
                     href="https://www.creative-tim.com?ref=nnjs-footer-small"
                     className="text-white hover:text-blueGray-300 text-sm font-semibold block py-1 px-3"
                   >
                     Creative Tim
                   </a>
-                </li>
+                </li> */}
                 <li>
-                  <a
-                    href="https://www.creative-tim.com/presentation?ref=nnjs-footer-small"
-                    className="text-white hover:text-blueGray-300 text-sm font-semibold block py-1 px-3"
-                  >
-                    About Us
-                  </a>
+                <Link href="pages/About_us.js">
+          <a
+            href="About_us"
+           
+          >
+            About us
+          </a>
+        </Link>
                 </li>
-                <li>
+                {/* <li>
                   <a
                     href="http://blog.creative-tim.com?ref=nnjs-footer-small"
                     className="text-white hover:text-blueGray-300 text-sm font-semibold block py-1 px-3"
@@ -57,7 +57,7 @@ export default function FooterSmall(props) {
                   >
                     MIT License
                   </a>
-                </li>
+                </li> */}
               </ul>
             </div>
           </div>

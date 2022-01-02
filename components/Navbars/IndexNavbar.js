@@ -61,7 +61,7 @@ export default function Navbar(props) {
                 </a>
               </li>
 
-              <li className="flex items-center">
+              {/* <li className="flex items-center">
                 <a
                   className="flex items-center px-3 py-4 text-xs font-bold uppercase hover:text-blueGray-500 text-blueGray-700 lg:py-2"
                   href="https://github.com/creativetimofficial/notus-nextjs?ref=nnjs-index-navbar"
@@ -70,7 +70,7 @@ export default function Navbar(props) {
                   <i className="text-lg text-blueGray-400 fab fa-github leading-lg " />
                   <span className="inline-block ml-2 lg:hidden">Star</span>
                 </a>
-              </li>
+              </li> */}
 
               
             </ul>
