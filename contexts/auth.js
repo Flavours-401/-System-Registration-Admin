@@ -1,6 +1,8 @@
 import { createContext, useContext, useState } from 'react';
 import jwt from 'jsonwebtoken';
 import axios from 'axios'
+import { useEffect } from "react";
+
 const baseUrl = process.env.NEXT_PUBLIC_API_URL;
 const tokenUrl = baseUrl + '/api/token/';
 
@@ -35,10 +37,19 @@ export function AuthProvider(props) {
                 id: decodedAccess.user_id
             },
         }
+        localStorage.setItem("token", JSON.stringify(newState))
 
         setState(prevState => ({ ...prevState, ...newState }));
-    }
+        console.log(newState);
+        console.log("HELOOOOO")
 
+    }
+    useEffect(() => {
+        const data = localStorage.getItem("token")
+        if (data) {
+            setState(JSON.parse(data))           
+        }
+    }, {})
     function logout() {
         const newState = {
             tokens: null,
