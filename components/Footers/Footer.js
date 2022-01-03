@@ -5,7 +5,7 @@ import Link from "next/link";
 export default function Footer() {
   return (
     <>
-      <footer className="relative pt-8 pb-6 bg-blueGray-200">
+      <footer className="relative pt-8 pb-6 bg-blueGray-200 py-8 ">
         <div
           className="absolute top-0 left-0 right-0 bottom-auto w-full h-20 -mt-20 overflow-hidden pointer-events-none"
           style={{ transform: "translateZ(0)" }}

@@ -16,9 +16,16 @@ import Dashboard from "./admin/dashboard";
 export default function Index() {
   const { user, login, logout } = useAuth();
   const { resources, loading, createResource, deleteResource } = useResource();
+  console.log(user);
   return (
     <>
-      <IndexNavbar fixed />
+    
+    {user ? (
+
+    <>
+    
+              
+     <IndexNavbar fixed />
       <section className="relative flex items-center h-screen pt-16 header max-h-860-px">
         <div className="container flex flex-wrap items-center mx-auto">
           <div className="w-full px-4 md:w-8/12 lg:w-6/12 xl:w-6/12">
@@ -30,13 +37,7 @@ export default function Index() {
                 Student Registration System is a place for students and teachers to manage their daily tasks and courses.
               </p>
               <div className="mt-12">
-                {user ? <Dashboard
-                  resources={resources}
-                  createResource={createResource}
-                  logout={logout}
-                  deleteResource={deleteResource}
-
-                /> : <Login login={login} user={user} /> }
+                
                 {/* <Link
                   href="/auth/login"
                   target="_blank"
@@ -182,6 +183,14 @@ export default function Index() {
         <Footer />
 
       </div>
+                 
+         
+    </>
+                      
+             )         :( <Login login={login} user={user} /> )}
+    
+                
+      
     </>
   );
 }
