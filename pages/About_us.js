@@ -24,7 +24,7 @@ function About_us() {
                     
                     <h1 className="mt-4 text-2xl font-semibold text-gray-700 capitalize dark:text-white">Razan Armouti</h1>
                     
-                    <p className="mt-2 text-gray-500 capitalize dark:text-gray-300"> Full stack Deverloper & IT consultant </p>
+                    <p className="mt-2 text-gray-500 capitalize dark:text-gray-300"> IT Manager </p>
                 </div>
 
                 <div className='basis-1/3 px-2'>
