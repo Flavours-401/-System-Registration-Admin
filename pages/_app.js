@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import App from "next/app";
 import Head from "next/head";
 import Router from "next/router";
-
+import { AuthProvider } from '../contexts/auth' 
 import PageChange from "components/PageChange/PageChange.js";
 
 import "@fortawesome/fontawesome-free/css/all.min.css";
@@ -41,7 +41,8 @@ export default class MyApp extends App {
 
     const Layout = Component.layout || (({ children }) => <>{children}</>);
 
-    return (
+    return <AuthProvider>
+    (
       <React.Fragment>
         <Head>
           <meta
@@ -56,5 +57,6 @@ export default class MyApp extends App {
         </Layout>
       </React.Fragment>
     );
+</AuthProvider>
   }
 }
