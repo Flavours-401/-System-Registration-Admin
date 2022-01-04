@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 
 // import TableDropdown from "components/Dropdowns/TableDropdown.js";
 
-export default function CardManageCourse({ color }) {
+export default function CardManageCourse({color,student} ) {
   return (
     <>
       <div
@@ -60,26 +60,7 @@ export default function CardManageCourse({ color }) {
                 >
                   Course Name
                 </th>
-                <th
-                  className={
-                    "px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left " +
-                    (color === "light"
-                      ? "bg-blueGray-50 text-blueGray-500 border-blueGray-100"
-                      : "bg-blueGray-600 text-blueGray-200 border-blueGray-500")
-                  }
-                >
-                  Created At
-                </th>
-                <th
-                  className={
-                    "px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left " +
-                    (color === "light"
-                      ? "bg-blueGray-50 text-blueGray-500 border-blueGray-100"
-                      : "bg-blueGray-600 text-blueGray-200 border-blueGray-500")
-                  }
-                >
-                  Updated At
-                </th>
+                
               
                 <th
                   className={
@@ -94,27 +75,25 @@ export default function CardManageCourse({ color }) {
               </tr>
             </thead>
             <tbody>
-              <tr className="p-4 px-6 text-xs align-middle border-t-0 border-l-0 border-r-0 whitespace-nowrap">
+              {
+                student?.map(item=>{
+                  return(
+                    <tr className="p-4 px-6 text-xs align-middle border-t-0 border-l-0 border-r-0 whitespace-nowrap">
                 <th className="p-4 px-6 text-xs align-middle border-t-0 border-l-0 border-r-0 whitespace-nowrap">
-                 
-                    1
-                
+                    {item.id}
                 </th>
                 <td >
-                  Python
+                 {item.course_name}
                 </td>
-                <td >
-                Dec. 30, 2021, 9:38 a.m.
-                </td>
-                <td >
-                Dec. 30, 2021, 9:38 a.m.              
-                </td>
-               
-                <td>
-                  <button>Edit</button>
+               <td>
                   <button>Delete</button>
                 </td>
               </tr>
+                  )
+
+                })
+              
+              }
             </tbody>
           </table>
         </div>
