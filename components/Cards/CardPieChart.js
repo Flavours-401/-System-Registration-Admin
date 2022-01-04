@@ -1,7 +1,11 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import axios from 'axios'
 import Chart from "chart.js";
 
+
+
 export default function CardPieChart(props) {
+  
   React.useEffect(() => {
     var config = {
       type: "doughnut",
@@ -23,7 +27,7 @@ export default function CardPieChart(props) {
               <h6 className="mb-1 text-xs font-semibold uppercase text-blueGray-100">
                 Overview
               </h6>
-              <h2 className="text-xl font-semibold text-white">Students VS Staff Attendance</h2>
+              <h2 className="text-xl font-semibold text-white">{props.chartName}</h2>
             </div>
           </div>
         </div>
