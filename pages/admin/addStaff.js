@@ -8,16 +8,20 @@ import CardAddStaff from "components/Cards/CardAddStaff.js";
 
 // layout for page
 
+
 import Admin from "layouts/Admin.js";
 
 export default function Settings() {
+
   const baseUrl = 'http://127.0.0.1:8000/';
-  const student_url = baseUrl + 'staff_list/';
-  const {LatestAnswer,setLatestAnswer} = useState({})
+  const student_url = baseUrl + 'staff_list2/';
+  const [LatestAnswer,setLatestAnswer] = useState({})
   
   const formHandler = async (e) => {
-
     e.preventDefault();
+    console.log(baseUrl);
+    console.log("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
+
     let answer = {
         email:e.target.email,
         username:e.target.username,
@@ -27,26 +31,24 @@ export default function Settings() {
         address:e.target.address,
         
     };
+
     const tokenLocal = localStorage.getItem("token")
     const localTwo = JSON.parse(tokenLocal)
     
-    setLatestAnswer(answer);
-
-    
+    setLatestAnswer(answer); 
     const config={
-        headers: {"Authorization" : `Bearer ${localTwo.token.access}`},   
+        headers: {"Authorization" : `Bearer ${localTwo.token.access}`}, 
+        body: answer,  
     }
-    // const data={answer:randomReply.id, 
-      
-    //             text:answer.question }
 
-
-      console.log(answer);
-    await axios.post(student_url, answer,config).then(response=>{
-      setLatestAnswer([...LatestAnswer, response.data]);
+     axios.post(student_url,config).then(response=>{
+      // setLatestAnswer(...LatestAnswer, response.data);
+      console.log("Response");
+      console.log(response)
       console.log(response.data);
     });
-    
+    console.log(LatestAnswer);
+
 }
 
   const [student, setstudent] = useState([]);
@@ -55,7 +57,7 @@ export default function Settings() {
       const localTwo = JSON.parse(tokenLocal)
      
       console.log("LS token: ",localTwo.token.access);
-      const data = async()=>{
+      
         const config = {
           headers: { "Authorization": `Bearer ${localTwo.token.access}` }
         }
@@ -64,10 +66,10 @@ export default function Settings() {
       axios.get(student_url, config).then(res => {
           setstudent(res.data)
           console.log(res.data);
-      });}
+      });
 
-      data()
   }, [LatestAnswer])
+
   const formName = "Add Staff"
 
   
