@@ -3,6 +3,8 @@ import React from "react";
 // components
 
 export default function CardAddStaff(props) {
+
+  
   return (
     <>
       <div className="relative flex flex-col w-full min-w-0 mb-6 break-words border-0 rounded-lg shadow-lg bg-blueGray-100">
@@ -13,7 +15,7 @@ export default function CardAddStaff(props) {
           </div>
         </div>
         <div className="flex-auto px-4 py-10 pt-0 lg:px-10">
-          <form>
+          <form  onSubmit={ e => props.formHandler()} >
             <h6 className="mt-3 mb-6 text-sm font-bold uppercase text-blueGray-400">
               Staff Information
             </h6>
@@ -27,6 +29,7 @@ export default function CardAddStaff(props) {
                     Username
                   </label>
                   <input
+                    name="username"
                     type="text"
                     className="w-full px-3 py-3 text-sm transition-all duration-150 ease-linear bg-white border-0 rounded shadow placeholder-blueGray-300 text-blueGray-600 focus:outline-none focus:ring"
                     defaultValue="Username"
@@ -42,6 +45,7 @@ export default function CardAddStaff(props) {
                     Email address
                   </label>
                   <input
+                  name="email"
                     type="email"
                     className="w-full px-3 py-3 text-sm transition-all duration-150 ease-linear bg-white border-0 rounded shadow placeholder-blueGray-300 text-blueGray-600 focus:outline-none focus:ring"
                     defaultValue="jesse@example.com"
@@ -57,6 +61,7 @@ export default function CardAddStaff(props) {
                     First Name
                   </label>
                   <input
+                  name="firstName"
                     type="text"
                     className="w-full px-3 py-3 text-sm transition-all duration-150 ease-linear bg-white border-0 rounded shadow placeholder-blueGray-300 text-blueGray-600 focus:outline-none focus:ring"
                     defaultValue="Lucky"
@@ -72,6 +77,7 @@ export default function CardAddStaff(props) {
                     Last Name
                   </label>
                   <input
+                  name="lastName"
                     type="text"
                     className="w-full px-3 py-3 text-sm transition-all duration-150 ease-linear bg-white border-0 rounded shadow placeholder-blueGray-300 text-blueGray-600 focus:outline-none focus:ring"
                     defaultValue="Jesse"
@@ -87,6 +93,7 @@ export default function CardAddStaff(props) {
                     Password
                   </label>
                   <input
+                  name="password"
                     type="text"
                     className="w-full px-3 py-3 text-sm transition-all duration-150 ease-linear bg-white border-0 rounded shadow placeholder-blueGray-300 text-blueGray-600 focus:outline-none focus:ring"
                     defaultValue="Jesse"
@@ -102,6 +109,7 @@ export default function CardAddStaff(props) {
                     Address
                   </label>
                   <input
+                  name="address"
                     type="text"
                     className="w-full px-3 py-3 text-sm transition-all duration-150 ease-linear bg-white border-0 rounded shadow placeholder-blueGray-300 text-blueGray-600 focus:outline-none focus:ring"
                     defaultValue="Bld Mihail Kogalniceanu, nr. 8 Bl 1, Sc 1, Ap 09"
