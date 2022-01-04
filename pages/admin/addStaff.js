@@ -23,31 +23,41 @@ export default function Settings() {
     console.log("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
 
     let answer = {
-        email:e.target.email,
-        username:e.target.username,
-        password:e.target.password,
-        first_name:e.target.firstName,
-        last_name:e.target.lastName,
-        address:e.target.address,
+        email:e.target.email.value,
+        username:e.target.username.value,
+        password:e.target.password.value,
+        first_name:e.target.firstName.value,
+        last_name:e.target.lastName.value,
+        address:e.target.address.value,
         
     };
+    console.log(answer)
 
     const tokenLocal = localStorage.getItem("token")
     const localTwo = JSON.parse(tokenLocal)
     
     setLatestAnswer(answer); 
-    const config={
-        headers: {"Authorization" : `Bearer ${localTwo.token.access}`}, 
-        body: answer,  
-    }
+    // const config={
+    //     headers: {"Authorization" : `Bearer ${localTwo.token.access}`}, 
+    //     body: answer,  
+    // }
 
-     axios.post(student_url,config).then(response=>{
-      // setLatestAnswer(...LatestAnswer, response.data);
-      console.log("Response");
-      console.log(response)
-      console.log(response.data);
-    });
-    console.log(LatestAnswer);
+    //  axios.post(student_url,config).then(response=>{
+    //   // setLatestAnswer(...LatestAnswer, response.data);
+    //   console.log("Response");
+    //   console.log(response)
+    //   console.log(response.data);
+
+    // });
+    const config = {
+      method: 'post',
+      url: student_url,
+      data: answer,
+      headers:{"Authorization" : `Bearer ${localTwo.token.access}`},
+    }
+    console.log(config);
+    const res = await axios(config)
+    console.log(res);
 
 }
 

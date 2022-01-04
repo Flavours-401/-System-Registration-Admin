@@ -14,11 +14,11 @@ import Admin from "layouts/Admin.js";
 export default function Tables() {
   const { user, login, logout } = useAuth();
   const { resources, loading, createResource, deleteResource } = useResource();
-  console.log(user);
+  // console.log(user);
   
   const [staff, setstaff] = useState([]);
   const baseUrl = 'http://127.0.0.1:8000/';
-  const staff_url = baseUrl + 'staff_list/';
+  const staff_url = baseUrl + 'staff_list2/';
 
   // const [student, setstudent] = useState([]);
   // const [course, setcourse] = useState([]);
@@ -41,12 +41,14 @@ export default function Tables() {
       data();
   }, [])
 
-
+  console.log('staff id :',staff );
+  // const staff2=staff;
   return (
     <>
       <div className="flex flex-wrap mt-4">
         <div className="w-full px-4 mb-12">
-          <CardManageStaff />
+          <CardManageStaff 
+          staff={staff}/>
         </div>
         {/* <div className="w-full px-4 mb-12">
           <CardTable color="dark" />

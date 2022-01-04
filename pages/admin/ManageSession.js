@@ -44,7 +44,9 @@ export default function Tables() {
     <>
       <div className="flex flex-wrap mt-4">
         <div className="w-full px-4 mb-12">
-          <CardManageSession/>
+          <CardManageSession
+          student={student}
+          />
         </div>
         {/* <div className="w-full px-4 mb-12">
           <CardTable color="dark" />

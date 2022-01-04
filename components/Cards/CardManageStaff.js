@@ -5,7 +5,11 @@ import PropTypes from "prop-types";
 
 // import TableDropdown from "components/Dropdowns/TableDropdown.js";
 
-export default function CardManageStaff({ color }) {
+export default function CardManageStaff({color,staff}) {
+    // const {staff} = props ;
+
+  console.log("from child : ", staff);
+
   return (
     <>
       <div
@@ -94,26 +98,7 @@ export default function CardManageStaff({ color }) {
                 >
                   Address
                 </th>              
-                <th
-                  className={
-                    "px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left " +
-                    (color === "light"
-                      ? "bg-blueGray-50 text-blueGray-500 border-blueGray-100"
-                      : "bg-blueGray-600 text-blueGray-200 border-blueGray-500")
-                  }
-                >
-                  Last Login
-                </th>
-                <th
-                  className={
-                    "px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left " +
-                    (color === "light"
-                      ? "bg-blueGray-50 text-blueGray-500 border-blueGray-100"
-                      : "bg-blueGray-600 text-blueGray-200 border-blueGray-500")
-                  }
-                >
-                  Date Joined
-                </th>
+
                 <th
                   className={
                     "px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left " +
@@ -128,42 +113,39 @@ export default function CardManageStaff({ color }) {
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <th className="flex items-center p-4 px-6 text-xs text-left align-middle border-t-0 border-l-0 border-r-0 whitespace-nowrap">
-                1
-                </th>
-                <td className="p-4 px-6 text-xs align-middle border-t-0 border-l-0 border-r-0 whitespace-nowrap">
-                  Yahia
-                </td>
-                <td className="p-4 px-6 text-xs align-middle border-t-0 border-l-0 border-r-0 whitespace-nowrap">
-                  Albashar
-                </td>
-                <td className="p-4 px-6 text-xs align-middle border-t-0 border-l-0 border-r-0 whitespace-nowrap">
-                  yahia
-                </td>
-                <td className="p-4 px-6 text-xs align-middle border-t-0 border-l-0 border-r-0 whitespace-nowrap">
-                  yahia@gmail.com
-                </td>
-                <td>
-                      Amman
-                </td>
-                <td>
-                    30-12-2021
-                </td>
-                <td>
-                     29-12-2021 
-                </td>
-                <td>
-                  <button>Edit</button>
-                  <button>Delete</button>
-                </td>
-
-
-
-                <td className="p-4 px-6 text-xs text-right align-middle border-t-0 border-l-0 border-r-0 whitespace-nowrap">
-                  {/* <TableDropdown /> */}
-                </td>
-              </tr>
+              
+              {
+              
+              staff?.map(item=>{
+              return (
+                   <tr>
+                   <td className="flex items-center p-4 px-6 text-xs text-left align-middle border-t-0 border-l-0 border-r-0 whitespace-nowrap">
+                   {item.id}
+                   </td>
+                   <td className="p-4 px-6 text-xs align-middle border-t-0 border-l-0 border-r-0 whitespace-nowrap">
+                     {item.username}
+                   </td>
+                   <td className="p-4 px-6 text-xs align-middle border-t-0 border-l-0 border-r-0 whitespace-nowrap">
+                     {item.first_name}
+                   </td>
+                   <td className="p-4 px-6 text-xs align-middle border-t-0 border-l-0 border-r-0 whitespace-nowrap">
+                     {item.last_name}
+                   </td>
+                   <td className="p-4 px-6 text-xs align-middle border-t-0 border-l-0 border-r-0 whitespace-nowrap">
+                      {item.email}                   </td>
+                   <td className="p-4 px-6 text-xs align-middle border-t-0 border-l-0 border-r-0 whitespace-nowrap">
+                         {item.address}
+                   </td>
+                   <td>
+                  {/* <button>Edit</button> */}
+                  <button className="p-1 rounded-full bg-rose-600" >Delete</button>
+                  </td>
+                   </tr>
+              );
+               })
+            }
+              
+            
             </tbody>
           </table>
         </div>

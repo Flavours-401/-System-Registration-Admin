@@ -15,18 +15,18 @@ export default function Login({login,user}) {
   const test =()=>{
     login(username, password)
   }
-  return (
+  return ( 
     
     <>
     <div className="flex flex-col items-center justify-center min-h-screen">
             <div className="flex flex-col items-center justify-center flex-1 w-full px-20 text-center">
                     <div className="grid grid-rows-3 gap-4 bg-green-300 rounded-md">
                         <div className="m-4 flex-2">
-                            <lable className="mr-3 font-semibold text-black-50" >username </lable>
+                            <lable className="mr-3 font-semibold text-black-50" >Username </lable>
                             <input value={username} type="text" name='username' className="w-4/5 form-control" onChange={(e) => setUsername(e.target.value)} />
                         </div>
                         <div className="m-4 flex-2">
-                            <lable className="mr-3 font-semibold text-black-50"> password </lable>
+                            <lable className="mr-3 font-semibold text-black-50"> Password </lable>
                             <input value={password} type="password" className="w-4/5 form-control" onChange={(e) => setPassword(e.target.value)} />
                         </div>
                         <div className="grid grid-rows-1 m-2">

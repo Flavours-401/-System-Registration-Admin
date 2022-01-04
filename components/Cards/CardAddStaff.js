@@ -15,7 +15,7 @@ export default function CardAddStaff(props) {
           </div>
         </div>
         <div className="flex-auto px-4 py-10 pt-0 lg:px-10">
-          <form  onSubmit={props.formHandler()} >
+          <form  onSubmit={props.formHandler} >
             <h6 className="mt-3 mb-6 text-sm font-bold uppercase text-blueGray-400">
               Staff Information
             </h6>

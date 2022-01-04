@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 
 // import TableDropdown from "components/Dropdowns/TableDropdown.js";
 
-export default function CardManageSubject({ color }) {
+export default function CardManageSubject({ color, staff }) {
   return (
     <>
       <div
@@ -23,8 +23,8 @@ export default function CardManageSubject({ color }) {
                   (color === "light" ? "text-blueGray-700" : "text-white")
                 }
               >
-               Subject Details
-               </h3>
+                Subject Details
+              </h3>
             </div>
           </div>
         </div>
@@ -73,27 +73,8 @@ export default function CardManageSubject({ color }) {
                 >
                   Staff
                 </th>
+
                 <th
-                  className={
-                    "px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left " +
-                    (color === "light"
-                      ? "bg-blueGray-50 text-blueGray-500 border-blueGray-100"
-                      : "bg-blueGray-600 text-blueGray-200 border-blueGray-500")
-                  }
-                >
-                  Created At
-                </th>
-                <th
-                  className={
-                    "px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left " +
-                    (color === "light"
-                      ? "bg-blueGray-50 text-blueGray-500 border-blueGray-100"
-                      : "bg-blueGray-600 text-blueGray-200 border-blueGray-500")
-                  }
-                >
-                  Updated At
-                </th>
-                              <th
                   className={
                     "px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left " +
                     (color === "light"
@@ -106,38 +87,40 @@ export default function CardManageSubject({ color }) {
               </tr>
             </thead>
             <tbody>
-              <tr className="p-4 px-6 text-xs align-middle border-t-0 border-l-0 border-r-0 whitespace-nowrap">
+
+              {
+                staff?.map(item=>{
+                  return (
+
+                    <tr className="p-4 px-6 text-xs align-middle border-t-0 border-l-0 border-r-0 whitespace-nowrap">
                 <th className="p-4 px-6 text-xs align-middle border-t-0 border-l-0 border-r-0 whitespace-nowrap">
-                 
-                    1
-                
+
+                {item.id}
+
                 </th>
                 <td >
-                  Django
+                  {item.subject_name}
                 </td>
                 <td >
-                  Python
+                {item.course_name}
                 </td>
                 <td >
-                
-                    Staff
-              
+
+                {item.staff}
+
                 </td>
-                <td >
-                
-                Dec. 30, 2021, 9:40 a.m.
-                   
-                 
-                </td>
-                <td >
-                Dec. 30, 2021, 9:40 a.m.
-                </td>
+        
                 <td>
-                  <button>Edit</button>
+                  {/* <button>Edit</button> */}
                   <button>Delete</button>
                 </td>
 
               </tr>
+                  )
+
+                })
+              
+}
             </tbody>
           </table>
         </div>

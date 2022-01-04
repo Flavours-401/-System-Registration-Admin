@@ -13,7 +13,7 @@ export default function CardAddStudents(props) {
           </div>
         </div>
         <div className="flex-auto px-4 py-10 pt-0 lg:px-10">
-          <form>
+          <form  onSubmit={props.formHandler} >
             <h6 className="mt-3 mb-6 text-sm font-bold uppercase text-blueGray-400">
               Student Information
             </h6>
@@ -32,6 +32,7 @@ export default function CardAddStudents(props) {
                     type="email"
                     className="w-full px-3 py-3 text-sm transition-all duration-150 ease-linear bg-white border-0 rounded shadow placeholder-blueGray-300 text-blueGray-600 focus:outline-none focus:ring"
                     defaultValue="jesse@example.com"
+                    name="email"
                   />
                 </div>
               </div>
@@ -48,6 +49,7 @@ export default function CardAddStudents(props) {
                     type="text"
                     className="w-full px-3 py-3 text-sm transition-all duration-150 ease-linear bg-white border-0 rounded shadow placeholder-blueGray-300 text-blueGray-600 focus:outline-none focus:ring"
                     defaultValue="Jesse"
+                    name="password"
                   />
                 </div>
               </div>
@@ -63,6 +65,7 @@ export default function CardAddStudents(props) {
                     type="text"
                     className="w-full px-3 py-3 text-sm transition-all duration-150 ease-linear bg-white border-0 rounded shadow placeholder-blueGray-300 text-blueGray-600 focus:outline-none focus:ring"
                     defaultValue="lucky.jesse"
+                    name="username"
                   />
                 </div>
               </div>
@@ -79,6 +82,7 @@ export default function CardAddStudents(props) {
                     type="text"
                     className="w-full px-3 py-3 text-sm transition-all duration-150 ease-linear bg-white border-0 rounded shadow placeholder-blueGray-300 text-blueGray-600 focus:outline-none focus:ring"
                     defaultValue="Lucky"
+                    name="first_name"
                   />
                 </div>
               </div>
@@ -94,24 +98,11 @@ export default function CardAddStudents(props) {
                     type="text"
                     className="w-full px-3 py-3 text-sm transition-all duration-150 ease-linear bg-white border-0 rounded shadow placeholder-blueGray-300 text-blueGray-600 focus:outline-none focus:ring"
                     defaultValue="Jesse"
+                    name="last_name"
                   />
                 </div>
               </div>
-              <div className="w-full px-4 lg:w-6/12">
-                <div className="relative w-full mb-3">
-                  <label
-                    className="block mb-2 text-xs font-bold uppercase text-blueGray-600"
-                    htmlFor="grid-password"
-                  >
-                    Username
-                  </label>
-                  <input
-                    type="text"
-                    className="w-full px-3 py-3 text-sm transition-all duration-150 ease-linear bg-white border-0 rounded shadow placeholder-blueGray-300 text-blueGray-600 focus:outline-none focus:ring"
-                    defaultValue="Jesse"
-                  />
-                </div>
-              </div>
+ 
               <div className="w-full px-4 lg:w-6/12">
                 <div className="relative w-full mb-3">
                   <label
@@ -123,7 +114,8 @@ export default function CardAddStudents(props) {
                   <input
                     type="text"
                     className="w-full px-3 py-3 text-sm transition-all duration-150 ease-linear bg-white border-0 rounded shadow placeholder-blueGray-300 text-blueGray-600 focus:outline-none focus:ring"
-                    defaultValue="Jesse"
+                    defaultValue="amman"
+                    name="address"
                   />
                 </div>
               </div>
@@ -138,7 +130,8 @@ export default function CardAddStudents(props) {
                   <input
                     type="text"
                     className="w-full px-3 py-3 text-sm transition-all duration-150 ease-linear bg-white border-0 rounded shadow placeholder-blueGray-300 text-blueGray-600 focus:outline-none focus:ring"
-                    defaultValue="Jesse"
+                    defaultValue="python"
+                    name="cource"
                   />
                 </div>
               </div>
@@ -153,7 +146,8 @@ export default function CardAddStudents(props) {
                   <input
                     type="text"
                     className="w-full px-3 py-3 text-sm transition-all duration-150 ease-linear bg-white border-0 rounded shadow placeholder-blueGray-300 text-blueGray-600 focus:outline-none focus:ring"
-                    defaultValue="Jesse"
+                    defaultValue="male"
+                    name="gender"
                   />
                 </div>
               </div>
@@ -168,12 +162,13 @@ export default function CardAddStudents(props) {
                   <input
                     type="text"
                     className="w-full px-3 py-3 text-sm transition-all duration-150 ease-linear bg-white border-0 rounded shadow placeholder-blueGray-300 text-blueGray-600 focus:outline-none focus:ring"
-                    defaultValue="Jesse"
+                    defaultValue="2022/2023"
+                    name="session_year"
                   />
                 </div>
               </div>
             
-              <div className="w-full px-4 lg:w-12/12">
+              {/* <div className="w-full px-4 lg:w-12/12">
                 <div className="relative w-full mb-3">
                   <label
                     className="block mb-2 text-xs font-bold uppercase text-blueGray-600"
@@ -181,18 +176,18 @@ export default function CardAddStudents(props) {
                   >
                    Profile Pic
                   </label>
-                  <input type="file" id="myFile" name="filename"/>
+                  <input type="file" id="myFile" name="profile_pic"/>
                 
                 </div>
            
-            </div>
+            </div> */}
            
               <div className="w-full px-4 lg:w-12/12">
                 <div className="relative w-full mb-3">
                
                 <button
               className="px-4 py-2 mr-1 text-xs font-bold text-white uppercase transition-all duration-150 ease-linear rounded shadow outline-none bg-blueGray-700 active:bg-blueGray-600 hover:shadow-md focus:outline-none"
-              type="button"
+              type="submit"
             >
               Add Student
                  </button> 

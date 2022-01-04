@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 
 // import TableDropdown from "components/Dropdowns/TableDropdown.js";
 
-export default function CardManageSession({ color }) {
+export default function CardManageSession({ color ,student}) {
   return (
     <>
       <div
@@ -84,23 +84,30 @@ export default function CardManageSession({ color }) {
               </tr>
             </thead>
             <tbody>
-              <tr className="p-4 px-6 text-xs align-middle border-t-0 border-l-0 border-r-0 whitespace-nowrap">
-                <th className="p-4 px-6 text-xs align-middle border-t-0 border-l-0 border-r-0 whitespace-nowrap">
-                 
-                    1
-                
-                </th>
-                <td >
-                June 1, 2021
-                </td>
-                <td >
-                Jan. 8, 2022
-                </td>
-                <td>
-                  <button>Edit</button>
-                  <button>Delete</button>
-                </td>
-              </tr>
+              {
+                student?.map(item=>{
+                  return(
+                    <tr className="p-4 px-6 text-xs align-middle border-t-0 border-l-0 border-r-0 whitespace-nowrap">
+                    <th className="p-4 px-6 text-xs align-middle border-t-0 border-l-0 border-r-0 whitespace-nowrap">
+                     
+                        {item.id}
+                    
+                    </th>
+                    <td >
+                    {item.session_start_year}
+                    </td>
+                    <td >
+                    {item.session_end_year}
+                    </td>
+                    <td>
+                      {/* <button>Edit</button> */}
+                      <button>Delete</button>
+                    </td>
+                  </tr>
+                  )
+
+                })
+}
             </tbody>
           </table>
         </div>
