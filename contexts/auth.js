@@ -17,7 +17,7 @@ export function useAuth() {
 export function AuthProvider(props) {
 
     const [state, setState] = useState({
-        tokens: null,
+        token: null,
         user: null,
         login,
         logout,
@@ -30,7 +30,7 @@ export function AuthProvider(props) {
         const decodedAccess = jwt.decode(response.data.access);
 
         const newState = {
-            tokens: response.data,
+            token: response.data,
             user: {
                 username: decodedAccess.username,
                 email: decodedAccess.email,
@@ -49,11 +49,12 @@ export function AuthProvider(props) {
         if (data) {
             setState(JSON.parse(data))           
         }
-    }, {})
+    }, [])
     function logout() {
         const newState = {
-            tokens: null,
+            token: null,
             user: null,
+            
         }
         setState(prevState => ({ ...prevState, ...newState }));
     }
