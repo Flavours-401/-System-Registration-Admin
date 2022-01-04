@@ -1,32 +1,31 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import axios from 'axios'
 import Chart from "chart.js";
 
-export default function StaffChart() {
+
+export default function StaffChart(props) {
   React.useEffect(() => {
     let config = {
       type: "bar",
       data: {
-        labels: [
-          "Staff",
-          
-        ],
+        labels: ["leaves", "attends"],
         datasets: [
           {
-            label: "Leave",
+            label: "leave",
             backgroundColor: "#ed64a6",
             borderColor: "#ed64a6",
-            data: [13],
+            data: [props.leaves.length, props.attends.length],
             fill: false,
             barThickness: 8,
           },
-          {
-            label:"Attendance",
-            fill: false,
-            backgroundColor: "#4c51bf",
-            borderColor: "#4c51bf",
-            data: [87],
-            barThickness: 8,
-          },
+          // {
+          //   label: "attends",
+          //   fill: false,
+          //   backgroundColor: "#4c51bf",
+          //   borderColor: "#4c51bf",
+          //   data: [props.attends.length],
+          //   barThickness: 8,
+          // },
         ],
       },
       options: {
@@ -60,12 +59,12 @@ export default function StaffChart() {
                 labelString: "Month",
               },
               gridLines: {
-                borderDash: [2],
-                borderDashOffset: [2],
+                borderDash: [5],
+                borderDashOffset: [5],
                 color: "rgba(33, 37, 41, 0.3)",
                 zeroLineColor: "rgba(33, 37, 41, 0.3)",
-                zeroLineBorderDash: [2],
-                zeroLineBorderDashOffset: [2],
+                zeroLineBorderDash: [5],
+                zeroLineBorderDashOffset: [5],
               },
             },
           ],
@@ -100,10 +99,10 @@ export default function StaffChart() {
           <div className="flex flex-wrap items-center">
             <div className="relative flex-1 flex-grow w-full max-w-full">
               <h6 className="mb-1 text-xs font-semibold uppercase text-blueGray-400">
-                Performance
+                statistics
               </h6>
               <h2 className="text-xl font-semibold text-blueGray-700">
-                Staff Leave VS Attendance
+                students Attendance VS Leaves
               </h2>
             </div>
           </div>
