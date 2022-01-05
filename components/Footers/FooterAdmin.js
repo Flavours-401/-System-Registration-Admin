@@ -3,9 +3,9 @@ import React from "react";
 export default function FooterAdmin() {
   return (
     <>
-      <footer className="block py-4">
-        <div className="container px-4 mx-auto">
-          <hr className="mb-4 border-b-1 border-blueGray-200" />
+      <footer className="block ">
+        <div className="container px-4 mx-auto ">
+          <hr className="mb-4 border-b-1 border-blueGray-200 " />
           <div className="flex flex-wrap items-center justify-center md:justify-between">
             <div className="w-full px-4 md:w-4/12">
               <div className="py-1 text-sm font-semibold text-center text-blueGray-500 md:text-left">

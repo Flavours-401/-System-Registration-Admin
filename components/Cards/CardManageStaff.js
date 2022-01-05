@@ -99,17 +99,6 @@ export default function CardManageStaff({color,staff}) {
                   Address
                 </th>              
 
-                <th
-                  className={
-                    "px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left " +
-                    (color === "light"
-                      ? "bg-blueGray-50 text-blueGray-500 border-blueGray-100"
-                      : "bg-blueGray-600 text-blueGray-200 border-blueGray-500")
-                  }
-                >
-                  Action
-                </th>
-
               </tr>
             </thead>
             <tbody>
@@ -136,10 +125,7 @@ export default function CardManageStaff({color,staff}) {
                    <td className="p-4 px-6 text-xs align-middle border-t-0 border-l-0 border-r-0 whitespace-nowrap">
                          {item.address}
                    </td>
-                   <td>
-                  {/* <button>Edit</button> */}
-                  <button className="p-1 rounded-full bg-rose-600" >Delete</button>
-                  </td>
+                   
                    </tr>
               );
                })
