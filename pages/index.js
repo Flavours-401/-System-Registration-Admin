@@ -12,6 +12,7 @@ import Contact_us from "./Contact_us";
 import { useAuth } from '../contexts/auth'
 import useResource from '../hooks/useResource'
 import Dashboard from "./admin/dashboard";
+import { bottom } from "@popperjs/core";
 
 export default function Index() {
   const { user, login, logout } = useAuth();
@@ -178,8 +179,9 @@ export default function Index() {
 
       </section>
 
-      <Contact_us />
       <div style={{ width: "100%", height: "50px" }}>
+      <Contact_us />
+
         <Footer />
 
       </div>

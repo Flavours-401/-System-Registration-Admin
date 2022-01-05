@@ -71,16 +71,6 @@ export default function CardManageSession({ color ,student}) {
                   Session End Year
                 </th>
                          
-                <th
-                  className={
-                    "px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left " +
-                    (color === "light"
-                      ? "bg-blueGray-50 text-blueGray-500 border-blueGray-100"
-                      : "bg-blueGray-600 text-blueGray-200 border-blueGray-500")
-                  }
-                >
-                  Action
-                </th>
               </tr>
             </thead>
             <tbody>
@@ -98,10 +88,6 @@ export default function CardManageSession({ color ,student}) {
                     </td>
                     <td >
                     {item.session_end_year}
-                    </td>
-                    <td>
-                      {/* <button>Edit</button> */}
-                      <button>Delete</button>
                     </td>
                   </tr>
                   )

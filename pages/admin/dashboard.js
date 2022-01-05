@@ -16,10 +16,10 @@ import CardPieChart from "components/Cards/CardPieChart.js";
 import Admin from "layouts/Admin.js";
 
 const baseUrl = 'http://127.0.0.1:8000/';
-const staff_url = baseUrl + 'staff_list/';
-const student_url = baseUrl + 'student_list/';
-const course_url = baseUrl + 'course_list/';
-const subject_url = baseUrl + 'subject_list/';
+const staff_url = baseUrl + 'staff_list2/';
+const student_url = baseUrl + 'student_list2/';
+const course_url = baseUrl + 'course_list2/';
+const subject_url = baseUrl + 'subject_list2/';
 const attedance_url = baseUrl + 'attedance_report_list/';
 
 

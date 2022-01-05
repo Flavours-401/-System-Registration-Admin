@@ -122,17 +122,7 @@ export default function CardManageStudents({ color, student }) {
                 >
                   Profile Pic
                 </th>
-    
-                <th
-                  className={
-                    "px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left " +
-                    (color === "light"
-                      ? "bg-blueGray-50 text-blueGray-500 border-blueGray-100"
-                      : "bg-blueGray-600 text-blueGray-200 border-blueGray-500")
-                  }
-                >
-                  Action
-                </th>
+  
               </tr>
             </thead>
             <tbody>
@@ -169,9 +159,6 @@ export default function CardManageStudents({ color, student }) {
                       </td>
                       <td >
                         <img width="100px" height="100px" src={item.profile_pic} />
-                      </td>
-                      <td>
-                        <button>Delete</button>
                       </td>
 
                     </tr>

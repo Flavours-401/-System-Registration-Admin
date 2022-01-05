@@ -1,5 +1,5 @@
 import React, { useState }  from "react";
-// import Link from "next/link";
+import Link from "next/link";
 
 // layout for page
 
@@ -18,7 +18,7 @@ export default function Login({login,user}) {
   return ( 
     
     <>
-    <div className="flex flex-col items-center justify-center min-h-screen">
+     {/* <div className="flex flex-col items-center justify-center min-h-screen">
             <div className="flex flex-col items-center justify-center flex-1 w-full px-20 text-center">
                     <div className="grid grid-rows-3 gap-4 bg-green-300 rounded-md">
                         <div className="m-4 flex-2">
@@ -34,28 +34,40 @@ export default function Login({login,user}) {
                         </div>
                     </div>
             </div>
-        </div>
+        </div> */}
 
-      {/* <div className="flex flex-col justify-center p-6">
-        <div className="flex flex-col mt-2">
-          <label className="hidden">Text</label>
-          <input type="text" name="username" id="username" placeholder="User Name" onChange={(e) => setUsername(e.target.value)}
-          className="px-3 py-3 mt-2 font-semibold text-gray-800 bg-white border border-gray-400 rounded-lg w-100 dark:bg-gray-800 dark:border-gray-700 focus:border-indigo-500 focus:outline-none" />
+<div class="w-full min-h-screen bg-gray-50 flex flex-col sm:justify-center items-center pt-6 sm:pt-0">
+  <div class="w-full sm:max-w-md p-5 mx-auto">
+    <h2 class="mb-12 text-center text-5xl font-extrabold">Welcome to Students Registration System.</h2>
+    
+      <div class="mb-4">
+        <label class="block mb-1" for="email">Email-Address</label>
+        <input value={username} type="text" name='username' class="py-2 px-3 border border-gray-300 focus:border-red-300 focus:outline-none focus:ring focus:ring-red-200 focus:ring-opacity-50 rounded-md shadow-sm disabled:bg-gray-100 mt-1 block w-full"
+        onChange={(e) => setUsername(e.target.value)} />
+      </div>
+      <div class="mb-4">
+        <label class="block mb-1" for="password">Password</label>
+        <input value={password} type="password" class="py-2 px-3 border border-gray-300 focus:border-red-300 focus:outline-none focus:ring focus:ring-red-200 focus:ring-opacity-50 rounded-md shadow-sm disabled:bg-gray-100 mt-1 block w-full"
+        onChange={(e) => setPassword(e.target.value)} />
+      </div>
+      <div class="mt-6 flex items-center justify-between">
+        <div class="flex items-center">
+          <input id="remember_me" type="checkbox" class="border border-gray-300 text-red-600 shadow-sm focus:border-red-300 focus:ring focus:ring-red-200 focus:ring-opacity-50" />
+          <label for="remember_me" class="ml-2 block text-sm leading-5 text-gray-900"> Remember me </label>
         </div>
+        <a href="#" class="text-sm"> Forgot your password? </a>
+      </div>
+      <div class="mt-6">
+        <button onClick={() => login(username, password)} class="w-50px inline-flex items-center justify-center px-4 py-2 bg-red-600 border border-transparent rounded-md font-semibold capitalize text-white hover:bg-red-700 active:bg-red-700 focus:outline-none focus:border-red-700 focus:ring focus:ring-red-200 disabled:opacity-25 transition">Sign In</button>
+      </div>
+      
+  </div>
+</div>
 
-        <div className="flex flex-col mt-2">
-          <label className="hidden">Email</label>
-          <input type="Password" name="password" id="password" placeholder="Password" onChange={(e) => setPassword(e.target.value)}
-          className="px-3 py-3 mt-2 font-semibold text-gray-800 bg-white border border-gray-400 rounded-lg w-100 dark:bg-gray-800 dark:border-gray-700 focus:border-indigo-500 focus:outline-none" />
-        </div>
 
-        <button type="submit" onClick={() => {test}} className="px-6 py-4 mt-12 mb-1 mr-1 text-sm font-bold text-white uppercase transition-all duration-150 ease-linear rounded shadow outline-none get-started focus:outline-none bg-blueGray-400 active:bg-blueGray-500 hover:shadow-lg">
-          Sign In
-        </button>
-      </div> */}
-     
-    </>
+        </>
   );
 }
 
 Login.layout = Auth;
+
